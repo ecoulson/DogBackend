@@ -20,7 +20,7 @@ router.get('/', (req, res, next) => {
 	})
 });
 
-router.get('/:name', (req, res, next) => {
+router.post('/:name', (req, res, next) => {
 	fs.appendFile(filePath, req.params.name + '\n', () => {
 		res.status(200).send({ success: true });
 	});
